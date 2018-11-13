@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PopularMovies-Stage1</string>
+    <string name="base_url">https://api.themoviedb.org/3/movie/</string>
+    <string name="error_msg">There was an error while fetching the data</string>
+</resources>
