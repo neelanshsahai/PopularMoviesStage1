@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">PopularMovies-Stage1</string>
     <string name="base_url">https://api.themoviedb.org/3/movie/</string>
+    <string name="base_poster_url">https://image.tmdb.org/t/p/original</string>
     <string name="error_msg">There was an error while fetching the data</string>
+    <string name="movIntentExtraKey">MOVIE_KEY_FOR_INTENT_EXTRA</string>
 </resources>

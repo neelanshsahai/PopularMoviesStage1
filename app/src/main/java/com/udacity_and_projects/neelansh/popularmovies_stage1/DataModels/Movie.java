@@ -2,7 +2,9 @@ package com.udacity_and_projects.neelansh.popularmovies_stage1.DataModels;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
 
     @SerializedName("vote_average") private float vote_average;
     @SerializedName("title") private String title;

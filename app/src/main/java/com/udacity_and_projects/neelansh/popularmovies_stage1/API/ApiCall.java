@@ -1,6 +1,7 @@
 package com.udacity_and_projects.neelansh.popularmovies_stage1.API;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.udacity_and_projects.neelansh.popularmovies_stage1.API_KEY;
@@ -25,10 +26,12 @@ public class ApiCall {
 
     public ApiCall(Context context) {
         this.mContext = context;
+        Log.e("dlirfboik", "constructor");
     }
 
     public List<Movie> getPopularMoviesResponses() {
 
+        Log.e("idufb", "popular");
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(mContext.getString(R.string.base_url))
                 .addConverterFactory(GsonConverterFactory.create())
@@ -42,12 +45,14 @@ public class ApiCall {
             @Override
             public void onResponse(Call<MoviesResult> call, Response<MoviesResult> response) {
                 popularMovies = response.body().getResults();
+                Log.e("skebfn", "onResponse");
             }
 
             @Override
             public void onFailure(Call<MoviesResult> call, Throwable t) {
                 // Show error
-                Toast.makeText(mContext, mContext.getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mContext, mContext.getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                Log.e("sldnvn", t.toString());
             }
         });
 
